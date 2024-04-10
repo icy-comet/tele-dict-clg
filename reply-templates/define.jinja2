@@ -1,0 +1,42 @@
+<b>{{d.word}}</b>
+<i>{{d.phonetic_text}}</i>{% if d.phonetic_audio %}<a href="{{d.phonetic_audio}}">🔊</a>{% endif %}
+{% for meaning in d.meanings %}
+{% if meaning.synonyms or meaning.antonyms +%}
+----
+<b>Part of Speech:</b>
+{{meaning.part_of_speech}}
+{% if meaning.synonyms %}
+
+<b>Synonyms:</b>
+{{meaning.synonyms|join(', ')}}
+{% endif %}
+{% if meaning.antonyms %}
+
+<b>Antonyms:</b>
+{{meaning.antonyms|join(', ')}}
+{% endif %}
+{% endif %}
+{% for defn in meaning.definitions +%}
+----
+<b>Part of Speech:</b>
+{{ meaning.part_of_speech }}
+
+<b>Definition:</b>
+{{ defn.definition }}
+{% if defn.example %}
+
+<b>Example:</b>
+{{ defn.example}}
+{% endif %}
+{% if defn.synonyms %}
+
+<b>Synonyms:</b>
+{{defn.synonyms|join(', ')}}
+{% endif %}
+{% if defn.antonyms %}
+
+<b>Antonyms:</b>
+{{defn.antonyms|join(', ')}}
+{% endif %}
+{% endfor %}
+{% endfor %}

@@ -1,0 +1,28 @@
+START_MSG = """
+howdy! 👋
+
+this is a simple bot that brings dictionary to your Telegram. 🤖
+
+send a normal message with the following syntax to see the magic. 🪄
+<code>define &lt;space&gt; &lt;your word&gt;</code>
+
+send <code>/help</code> anytime to refresh your memory ;)"""
+
+HELP_MSG = """
+howdy! 👋
+
+this is a simple bot that brings dictionary to your Telegram. ;) 🤖
+
+send a text message with the following syntax to see the magic. 🪄
+<code>define &lt;space&gt; &lt;your word&gt;</code>"""
+
+SYNTAX_ERROR_MSG = """
+beep. bop. beep. 🤖
+
+i couldn't understand you.
+send <code>/help</code> to know the proper syntax."""
+
+GENERAL_ERROR_MSG = """
+beep. bop. beep. 🤖
+
+something went wrong at our end. please try again later."""
